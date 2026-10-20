@@ -8,3 +8,11 @@
 
 live demo
 https://sunkukarthik5.github.io/login/
+
+1. user enters username and password
+
+2. react sends credentials securely to fastapi
+
+3. backend verifies the password against its stored hash
+
+4. backend checks the user's role and grants permitted access
