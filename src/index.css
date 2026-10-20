@@ -1,0 +1,70 @@
+:root {
+  --ink: #17212b;
+  --muted: #5d6b79;
+  --line: #d9e0e7;
+  --bg: #f3f6f9;
+  --card: #ffffff;
+  --brand: #0b6e7f;
+  --brand-dark: #08525f;
+  --danger: #b42318;
+  --admin: #7a3db8;
+  --manager: #c2570c;
+  --engineer: #0b6e7f;
+  --viewer: #3b5bdb;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+button, input { font: inherit; }
+:focus-visible { outline: 3px solid #7cc4d1; outline-offset: 2px; }
+
+/* ---------- Login ---------- */
+.login { min-height: 100%; display: grid; place-items: center; padding: 24px; }
+.login-card {
+  width: min(400px, 100%);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 32px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.login-card h1 { margin: 0; font-size: 1.5rem; line-height: 1.2; }
+.sub { color: var(--muted); margin: 0 0 12px; }
+.login-card label { font-weight: 500; margin-top: 10px; font-size: .95rem; }
+.login-card input {
+  padding: 10px 12px; border: 1px solid #b8c3ce; border-radius: 6px; background: #fff;
+}
+.error { color: var(--danger); margin: 10px 0 0; font-size: .92rem; }
+
+.btn {
+  padding: 11px 14px; border-radius: 6px; border: 1px solid var(--line);
+  background: #fff; cursor: pointer; margin-top: 14px;
+}
+.btn.primary { background: var(--brand); border-color: var(--brand); color: #fff; font-weight: 600; }
+.btn.primary:hover { background: var(--brand-dark); }
+.btn.small { margin: 0; padding: 6px 12px; }
+
+/* ---------- Top heading (after login) ---------- */
+.topbar {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+  background: #fff; border-bottom: 1px solid var(--line); padding: 12px 24px;
+}
+.who { display: flex; align-items: center; gap: 12px; }
+.avatar {
+  width: 32px; height: 32px; border-radius: 50%; background: var(--brand-dark); color: #fff;
+  display: grid; place-items: center; font-size: .8rem; font-weight: 600;
+}
+.badge { padding: 3px 10px; border-radius: 999px; font-size: .8rem; font-weight: 600; color: #fff; }
+.badge-admin { background: var(--admin); }
+.badge-manager { background: var(--manager); }
+.badge-engineer { background: var(--engineer); }
+.badge-viewer { background: var(--viewer); }
+
+@media (max-width: 600px) {
+  .name { display: none; }
+}
