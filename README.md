@@ -6,5 +6,4 @@
 | Support Engineer | engineer@demo.com | engineer@123 |
 | Business Viewer (User) | user@demo.com | user@123 |
 
-Passwords are stored as SHA-256 hashes in `src/data/users.js`.
 
